@@ -1,0 +1,26 @@
+gfiledict:
+#qpsi is the safety factor as a function of equally spaced psi points
+dict_keys(['header', 'idum', 'mw', 'mh', 'xdim', 'zdim', 'rzero', 'rgrid1', 'zmid', 'rmaxis', 
+'zmaxis', 'ssimag', 'ssibdry', 'bcentr', 'cpasma', 'ssibry', 'rgrid', 'zgrid', 'psirz', 
+'psirzraw', 'fpol', 'pres', 'ffprim', 'pprime', 'qpsi', 'nbbbs', 'rbbbs', 'zbbbs', 
+'nlim', 'xlim', 'ylim', 'isPlasma', 'pressrz', 'qrz', 'btrz', 'brrz', 'bzrz', 
+'jtrz', 'npsimid', 'gammamid', 'bzmid', 'btmid', 'jtmid', 'pressmid', 'qmid'])
+
+
+omfit eqdsk: 
+['CASE', 'NW', 'NH', 'RDIM', 'ZDIM', 'RCENTR', 'RLEFT', 'ZMID', 'RMAXIS', 'ZMAXIS', 'SIMAG', 'SIBRY', 'BCENTR',
+ 'CURRENT', 'FPOL', 'PRES', 'FFPRIM', 'PPRIME', 'PSIRZ', 'QPSI', 'NBBBS', 'LIMITR', 'RBBBS', 'ZBBBS', 'RLIM', 
+ 'ZLIM', 'KVTOR', 'RVTOR', 'NMASS', 'RHOVN', 'KEECUR', 'AuxNamelist', 'AuxQuantities', 'fluxSurfaces', '_desc']
+
+ fluxSurfaces -> ['R0', 'Z0', 'RCENTR', 'R0_interp', 'Z0_interp', 'levels', 'flux', 'BCENTR', 'avg', 'geo', 'midplane', 'CURRENT', 'info']
+ fluxSurfaces -> avg -> ['R', 'a', 'R**2', '1/R', '1/R**2', 'Bp', 'Bp**2', 'Bp*R', 'Bp**2*R**2', 'Btot', 'Btot**2', 'Bt',
+  						'Bt**2', 'ip', 'vp', 'q', 'hf', 'Jt', 'Jt/R', 'fc', 'grad_term', 'P', 'F', 'PPRIME', 'FFPRIM', 'dip/dpsi',
+  						'Jeff', 'beta_t', 'beta_n', 'beta_p', 'fcap', 'hcap', 'gcap']
+ fluxSurfaces -> geo -> ['psi', 'psin', 'R', 'R_centroid', 'Rmax_centroid', 'Rmin_centroid', 'Z', 'Z_centroid', 'a', 'dell', 
+ 						'delta', 'delu', 'eps', 'kap', 'kapl', 'kapu', 'lonull', 'per', 'surfArea', 'upnull', 'zeta', 'zetail',
+						 'zetaiu', 'zetaol', 'zetaou', 'zoffset', 'vol', 'cxArea', 'phi', 'bunit', 'rho', 'rhon']
+
+***RHO and RHORZ are actually normalized rho
+AuxQuantities -> ['R', 'Z', 'PSI', 'PSI_NORM', 'PSIRZ', 'PSIRZ_NORM', 'RHOp', 'RHOpRZ', 'FPOLRZ', 'PRESRZ', 'QPSIRZ', 'FFPRIMRZ', 
+				'PPRIMERZ', 'PRES0RZ', 'Br', 'Bz', 'Bp', 'Bt', 'Jr', 'Jz', 'Jt', 'Jp', 'Jt_fb', 'Jpar', 'PHI', 'PHI_NORM', 
+				'PHIRZ', 'RHOm', 'RHO', 'RHORZ', 'Rx1', 'Zx1', 'Rx2', 'Zx2']
